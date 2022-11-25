@@ -48,15 +48,9 @@ async function editItem() {
 	itemSongNode.innerText = "";
 
 	let inputArtistNode = document.createElement("input");
-	inputArtistNode.setAttribute("type", "text");
-	inputArtistNode.setAttribute("name", "artist");
-	inputArtistNode.setAttribute("required", "");
 	inputArtistNode.value = itemArtist;
 
 	let inputSongNode = document.createElement("input");
-	inputSongNode.setAttribute("type", "text");
-	inputSongNode.setAttribute("name", "song");
-	inputSongNode.setAttribute("required", "");
 	inputSongNode.value = itemSong;
 
 	itemArtistNode.appendChild(inputArtistNode);
@@ -64,8 +58,11 @@ async function editItem() {
 
 	// Save
 	this.addEventListener("click", async () => {
-		const inputArtist = inputArtistNode.value;
-		const inputSong = inputSongNode.value;
+		let inputArtist = inputArtistNode.value;
+		let inputSong = inputSongNode.value;
+
+		if (inputArtist === "") inputArtist = itemArtist;
+		if (inputSong === "") inputSong = itemSong;
 
 		try {
 			const response = await fetch("editMusic", {
