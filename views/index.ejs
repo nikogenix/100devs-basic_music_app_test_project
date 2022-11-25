@@ -29,18 +29,24 @@
             <th></th>
             <th></th>
         </tr>
-        <% for(let i=0; i < items.length; i++) {%>
-            <tr class="item">
-                <td class="artist">
-                    <%= items[i].artist %>
-                </td>
-                <td class="song">
-                    <%= items[i].song %>
-                </td>
-                <td class="fa fa-edit"></td>
-                <td class='fa fa-trash'></td>
+        <% if(items.length===0) {%>
+            <tr>
+                <td class="empty">No songs have been added yet</td>
             </tr>
             <% } %>
+
+                <% for(let i=0; i < items.length; i++) {%>
+                    <tr class="item">
+                        <td class="artist">
+                            <%= items[i].artist %>
+                        </td>
+                        <td class="song">
+                            <%= items[i].song %>
+                        </td>
+                        <td class="fa fa-edit"></td>
+                        <td class='fa fa-trash'></td>
+                    </tr>
+                    <% } %>
     </table>
 
     <script src='js/main.js'></script>
