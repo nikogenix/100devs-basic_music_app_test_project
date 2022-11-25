@@ -11,6 +11,7 @@ h2 {
 
 .submit-box {
 	width: 80vw;
+	max-width: 900px;
 	margin: 10px auto;
 }
 
@@ -34,10 +35,11 @@ form {
 table {
 	box-sizing: border-box;
 	width: 100vw;
+	max-width: 900px;
 	word-wrap: break-word;
 	table-layout: fixed;
 	padding: 20px;
-	margin: 0;
+	margin: 0 auto;
 }
 
 table tr th:nth-child(3),
