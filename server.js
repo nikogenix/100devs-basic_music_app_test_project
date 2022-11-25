@@ -30,7 +30,7 @@ app.get("/", async (request, response) => {
 });
 
 app.post("/addMusic", (request, response) => {
-	cl.insertOne({ artist: request.body.artist, song: request.body.song, rating: request.body.rating })
+	cl.insertOne({ artist: request.body.artist, song: request.body.song })
 		.then((result) => {
 			console.log("Music Added");
 			response.redirect("/");
