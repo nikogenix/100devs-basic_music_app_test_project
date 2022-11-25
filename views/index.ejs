@@ -16,28 +16,32 @@
     <h2>Add a song:</h2>
 
     <form action="/addMusic" method="POST">
-        <input type="text" placeholder="Artist" name="artist">
-        <input type="text" placeholder="Song" name="song">
+        <input type="text" placeholder="Artist" name="artist" required>
+        <input type="text" placeholder="Song" name="song" required>
 
         <input type="submit">
     </form>
 
-
-    <ul class="items">
+    <table>
+        <tr>
+            <th>Artist</th>
+            <th>Song</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
         <% for(let i=0; i < items.length; i++) {%>
-            <li class="item">
-                <i class="fa fa-edit"></i>
-                <span class='fa fa-trash'></span>
-                <span class="artist">
+            <tr class="item">
+                <td class="artist">
                     <%= items[i].artist %>
-                </span> <span> - </span>
-                <span class="song">
+                </td>
+                <td class="song">
                     <%= items[i].song %>
-                </span>
-
-            </li>
+                </td>
+                <td class="fa fa-edit"></td>
+                <td class='fa fa-trash'></td>
+            </tr>
             <% } %>
-    </ul>
+    </table>
 
     <script src='js/main.js'></script>
 </body>
