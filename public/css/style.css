@@ -1,0 +1,63 @@
+html,
+body {
+	padding: 0;
+	margin: 0;
+}
+
+h1,
+h2 {
+	text-align: center;
+}
+
+.submit-box {
+	width: 80vw;
+	margin: 10px auto;
+}
+
+form {
+	width: 100%;
+	margin: 10px auto;
+}
+
+.button {
+	display: block;
+	width: auto;
+	margin: 10px auto;
+}
+
+.text {
+	box-sizing: border-box;
+	width: 49%;
+	margin: 10px auto;
+}
+
+table {
+	box-sizing: border-box;
+	width: 100vw;
+	word-wrap: break-word;
+	table-layout: fixed;
+	padding: 20px;
+	margin: 0;
+}
+
+table tr th:nth-child(3),
+table tr th:nth-child(4) {
+	width: 62px;
+}
+
+td.fa {
+	display: inline-block;
+	font-size: 20px;
+	width: 30px;
+	vertical-align: bottom;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+td {
+	text-align: center;
+}
+
+.empty {
+	text-align: center;
+}

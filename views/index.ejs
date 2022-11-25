@@ -13,43 +13,43 @@
 <body>
     <h1>Music Library </h1>
 
-    <h2>Add a song:</h2>
-
-    <form action="/addMusic" method="POST">
-        <input type="text" placeholder="Artist" name="artist" required>
-        <input type="text" placeholder="Song" name="song" required>
-
-        <input type="submit">
-    </form>
+    <div class="submit-box">
+        <h2>Add a song:</h2>
+        <form action="/addMusic" method="POST">
+            <input class="text" type="text" placeholder="Artist" name="artist" required>
+            <input class="text" type="text" placeholder="Song" name="song" required>
+            <input class="button" type="submit">
+        </form>
+    </div>
 
     <table>
-        <tr>
-            <th>Artist</th>
-            <th>Song</th>
-            <th></th>
-            <th></th>
-        </tr>
-        <% if(items.length===0) {%>
+        <thead>
             <tr>
-                <td class="empty">No songs have been added yet</td>
+                <th>Artist</th>
+                <th>Song</th>
+                <th></th>
             </tr>
-            <% } %>
-
-                <% for(let i=0; i < items.length; i++) {%>
-                    <tr class="item">
-                        <td class="artist">
-                            <%= items[i].artist %>
-                        </td>
-                        <td class="song">
-                            <%= items[i].song %>
-                        </td>
-                        <td class="fa fa-edit"></td>
-                        <td class='fa fa-trash'></td>
-                    </tr>
-                    <% } %>
+        </thead>
+        <tbody>
+            <% for(let i=0; i < items.length; i++) {%>
+                <tr class="item">
+                    <td class="artist">
+                        <%= items[i].artist %>
+                    </td>
+                    <td class="song">
+                        <%= items[i].song %>
+                    </td>
+                    <td class="fa fa-edit"></td>
+                    <td class='fa fa-trash'></td>
+                </tr>
+                <% } %>
+        </tbody>
     </table>
+    <% if(items.length===0) {%>
+        <p class="empty">No songs have been added yet</p>
+        <% } %>
 
-    <script src='js/main.js'></script>
+            <script src='js/main.js'></script>
 </body>
 
 </html>
