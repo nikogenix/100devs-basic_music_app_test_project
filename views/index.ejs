@@ -26,13 +26,15 @@
     <ul class="items">
         <% for(let i=0; i < items.length; i++) {%>
             <li class="item">
+                <i class="fa fa-edit"></i>
+                <span class='fa fa-trash'></span>
                 <span class="artist">
                     <%= items[i].artist %>
                 </span> <span> - </span>
                 <span class="song">
                     <%= items[i].song %>
                 </span>
-                <span class='fa fa-trash'></span>
+
             </li>
             <% } %>
     </ul>
